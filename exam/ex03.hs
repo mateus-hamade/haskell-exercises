@@ -21,5 +21,11 @@
 -- isLetter 'a' == True
 -- isLetter '1' == False
 -- isLetter '!' == False
+import Data.Char
 
--- 20 pontos
+capitalize :: String -> [String]
+capitalize [] = []
+capitalize xs = __
+
+-- a => ['aba', 'teste', 'dado']
+-- a => [[aba], [teste], [dado]]

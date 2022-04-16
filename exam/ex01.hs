@@ -11,5 +11,3 @@
 count :: (a -> Bool) -> [a] -> Int
 count _ [] = 0 
 count f xs = length [a | a <- xs, f a]
-
--- 10 pontos 

@@ -22,8 +22,6 @@ validTask (Task _ y)
     | y > 0     = True
     | otherwise = False 
 
--- 10 pontos
-
 -- b) Desenvolva a função = validProject :: Project -> Bool
 
 -- que determina se um projeto é composto apenas por tarefas válidas. Sua
@@ -44,16 +42,6 @@ validProject (Project (x : xs)) = validTask x && validProject (Project xs)
 -- totalTime (Project []) == 0
 -- totalTime (Project [ Task "tarefa 1" 10, Task "tarefa 2" 20]) == 30
 
--- 20 pontos
-
 totalTime :: Project -> Int
 totalTime (Project []) = 0
-totalTime (Project xs) = sum [a | a <- xs, Task ]
-
--- Project xs
---     where
---         xs = [Task, Task]
-
--- Project [Task, Task]
-
--- 20 pontos
+totalTime (Project ((Task _ x) : xs)) = x + totalTime (Project xs)
