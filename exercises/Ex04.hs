@@ -1,3 +1,6 @@
+-- Defina a função minList que retorna o menor inteiro de uma lista de
+-- números fornecida como entrada.
+
 minList :: (Ord a) => [a] -> a
 minList [] = error "empty list"
 minList [x] = x
