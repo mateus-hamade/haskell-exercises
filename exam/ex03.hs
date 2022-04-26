@@ -21,11 +21,14 @@
 -- isLetter 'a' == True
 -- isLetter '1' == False
 -- isLetter '!' == False
+
 import Data.Char
 
-capitalize :: String -> [String]
-capitalize [] = []
-capitalize xs = __
-
--- a => ['aba', 'teste', 'dado']
--- a => [[aba], [teste], [dado]]
+capitalize :: String -> String
+capitalize [] = ""
+capitalize xs = unwords(separa(words xs))
+    where
+        separa y = map upperF y
+        upperF (z : zs)
+            | isLetter z = ((toUpper z) : zs)
+            | otherwise = (z : zs)
