@@ -17,3 +17,6 @@ sendOfferTrue (x : xs)
     | otherwise = sendOfferTrue xs
 
 -- sendOfferTrue [(Client "name" "surname" boolean), ...]
+
+sendOfferTrueWithFilter :: [Client] -> [Client]
+sendOfferTrueWithFilter (x : xs) = filter (\x -> (sendOffer x) == True) (x : xs)
