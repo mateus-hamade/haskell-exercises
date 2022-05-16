@@ -2,7 +2,7 @@
 -- o resultado da conversão para string de um valor de tipo Person exiba apenas o campo name deste registro.
 
 instance Show Person where
-    show (Person a _) = show a ++ "é mais velho!" 
+    show (Person a _) = show a
 
 data Person = Person{
     name :: String,
